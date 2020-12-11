@@ -3,6 +3,7 @@ from pysnmp import debug
 from pysnmp.entity.rfc3413 import cmdrsp, context, ntforg
 from pysnmp.carrier.asynsock.dgram import udp
 from pysnmp.smi import builder
+from pysnmp.proto import rfc1902
 
 import threading
 import collections
@@ -60,7 +61,7 @@ class SNMPAgent(object):
 
         #open a UDP socket to listen for snmp requests
         config.addSocketTransport(self._snmpEngine, udp.domainName,
-                                  udp.UdpTransport().openServerMode(('', 161)))
+                                  udp.UdpTransport().openServerMode(('172.16.27.54', 161)))
 
         #add a v2 user with the community string public
         config.addV1System(self._snmpEngine, "agent", "public")
@@ -127,8 +128,8 @@ class SNMPAgent(object):
             self._snmpEngine,
             'test-notification',
             ('MY-MIB', 'testTrap'),
-            ())
-
+            [(rfc1902.ObjectName('1.3.6.1.4.1.72.2'),
+                                  rfc1902.OctetString("Victor Shoaga"))])
 
     def serve_forever(self):
         print ("Starting agent")

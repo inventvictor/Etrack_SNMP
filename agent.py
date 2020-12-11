@@ -24,7 +24,7 @@ class Mib(object):
         self._test_count = 0
 
     def getTestDescription(self):
-        return "My Description"
+        return "Victor Shoaga"
 
     def getTestCount(self):
         with self._lock:
@@ -121,15 +121,16 @@ class SNMPAgent(object):
             'all-my-managers', 'trap')
 
 
-    def sendTrap(self):
+    def sendTrap(self, testCount, testDescription):
         print ("Sending trap")
         ntfOrg = ntforg.NotificationOriginator(self._snmpContext)
         errorIndication = ntfOrg.sendNotification(
             self._snmpEngine,
             'test-notification',
-            ('MY-MIB', 'testTrap'),
-            [(rfc1902.ObjectName('1.3.6.1.4.1.72.2'),
-                                  rfc1902.OctetString("Victor Shoaga"))])
+            ('TEST-MIB', 'testTrap'),
+            [(rfc1902.ObjectName('1.3.6.1.4.1.75.2'),
+                                  rfc1902.OctetString(testDescription)), (rfc1902.ObjectName('1.3.6.1.4.1.75.1'),
+                                  rfc1902.Integer(testCount))])
 
     def serve_forever(self):
         print ("Starting agent")
@@ -155,12 +156,12 @@ class Worker(threading.Thread):
         while True:
             time.sleep(3)
             self._mib.setTestCount(mib.getTestCount()+1)
-            self._agent.sendTrap()
+            self._agent.sendTrap(mib.getTestCount()+1, "Victor Shoaga")
 
 if __name__ == '__main__':
     mib = Mib()
-    objects = [MibObject('MY-MIB', 'testDescription', mib.getTestDescription),
-               MibObject('MY-MIB', 'testCount', mib.getTestCount)]
+    objects = [MibObject('TEST-MIB', 'testDescription', mib.getTestDescription),
+               MibObject('TEST-MIB', 'testCount', mib.getTestCount)]
     agent = SNMPAgent(objects)
     agent.setTrapReceiver('172.16.26.217', 'traps')
     Worker(agent, mib).start()

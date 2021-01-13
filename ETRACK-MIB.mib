@@ -1,0 +1,615 @@
+ETRACK-MIB DEFINITIONS ::= BEGIN IMPORTS
+        OBJECT-TYPE, Integer32, NOTIFICATION-TYPE, enterprises
+                     FROM SNMPv2-SMI ;
+    
+etrackAfricaCompany OBJECT IDENTIFIER ::= {enterprises 76} 
+akute OBJECT IDENTIFIER ::= {etrackAfricaCompany 146}
+allenAvenue OBJECT IDENTIFIER ::= {etrackAfricaCompany 37}
+magodo OBJECT IDENTIFIER ::= {etrackAfricaCompany 209}
+ojodu OBJECT IDENTIFIER ::= {etrackAfricaCompany 101}
+ogudu OBJECT IDENTIFIER ::= {etrackAfricaCompany 202}
+ahmaduBelloWay OBJECT IDENTIFIER ::= {etrackAfricaCompany 60}
+sanusiFafunwa OBJECT IDENTIFIER ::= {etrackAfricaCompany 139}
+chevron OBJECT IDENTIFIER ::= {etrackAfricaCompany 109}
+vgc OBJECT IDENTIFIER ::= {etrackAfricaCompany 168}
+adeolaHopewell OBJECT IDENTIFIER ::= {etrackAfricaCompany 208}
+adeoluOdeku OBJECT IDENTIFIER ::= {etrackAfricaCompany 177}
+lekki OBJECT IDENTIFIER ::= {etrackAfricaCompany 108}
+ajoseAdeogun OBJECT IDENTIFIER ::= {etrackAfricaCompany 171}
+keffiRoad OBJECT IDENTIFIER ::= {etrackAfricaCompany 100}
+festac OBJECT IDENTIFIER ::= {etrackAfricaCompany 99}
+igando OBJECT IDENTIFIER ::= {etrackAfricaCompany 179}
+ikateSurulere OBJECT IDENTIFIER ::= {etrackAfricaCompany 196}
+alabaSuru OBJECT IDENTIFIER ::= {etrackAfricaCompany 149}
+apapa OBJECT IDENTIFIER ::= {etrackAfricaCompany 38}
+apapaCreekroad OBJECT IDENTIFIER ::= {etrackAfricaCompany 97}
+pointRoad OBJECT IDENTIFIER ::= {etrackAfricaCompany 164}
+tincan OBJECT IDENTIFIER ::= {etrackAfricaCompany 83}
+agudaSurulere OBJECT IDENTIFIER ::= {etrackAfricaCompany 135}
+ejigbo OBJECT IDENTIFIER ::= {etrackAfricaCompany 204}
+nnpcEjigbo OBJECT IDENTIFIER ::= {etrackAfricaCompany 152}
+abuleEgba OBJECT IDENTIFIER ::= {etrackAfricaCompany 107}
+iyanaIpaja OBJECT IDENTIFIER ::= {etrackAfricaCompany 71}
+ikotun OBJECT IDENTIFIER ::= {etrackAfricaCompany 111}
+agbadoKollington OBJECT IDENTIFIER ::= {etrackAfricaCompany 183}
+ayobo OBJECT IDENTIFIER ::= {etrackAfricaCompany 230}
+
+badagry OBJECT IDENTIFIER ::= {etrackAfricaCompany 118} 
+B13735378 OBJECT IDENTIFIER ::= {badagry 378}
+ME0000306 OBJECT IDENTIFIER ::= {badagry 306}
+
+semeBorder OBJECT IDENTIFIER ::= {etrackAfricaCompany 114}
+isaacJohn OBJECT IDENTIFIER ::= {etrackAfricaCompany 34}
+ogba OBJECT IDENTIFIER ::= {etrackAfricaCompany 51}
+mowe OBJECT IDENTIFIER ::= {etrackAfricaCompany 240}
+coker OBJECT IDENTIFIER ::= {etrackAfricaCompany 63}
+appleJunction OBJECT IDENTIFIER ::= {etrackAfricaCompany 195}
+navyTown OBJECT IDENTIFIER ::= {etrackAfricaCompany 85}
+mafoluku OBJECT IDENTIFIER ::= {etrackAfricaCompany 180}
+mmiaAirport OBJECT IDENTIFIER ::= {etrackAfricaCompany 46}
+saudiEko OBJECT IDENTIFIER ::= {etrackAfricaCompany 126}
+balogunMarket OBJECT IDENTIFIER ::= {etrackAfricaCompany 191}
+moloney OBJECT IDENTIFIER ::= {etrackAfricaCompany 47}
+cityMall OBJECT IDENTIFIER ::= {etrackAfricaCompany 182}
+bariga OBJECT IDENTIFIER ::= {etrackAfricaCompany 103}
+ifakoGbagada OBJECT IDENTIFIER ::= {etrackAfricaCompany 147}
+yaba OBJECT IDENTIFIER ::= {etrackAfricaCompany 58}
+iwaya OBJECT IDENTIFIER ::= {etrackAfricaCompany 181}
+ipakodo OBJECT IDENTIFIER ::= {etrackAfricaCompany 214}
+ajahMarket OBJECT IDENTIFIER ::= {etrackAfricaCompany 120}
+agricQsp OBJECT IDENTIFIER ::= {etrackAfricaCompany 203}
+ikorodu OBJECT IDENTIFIER ::= {etrackAfricaCompany 43}
+badore OBJECT IDENTIFIER ::= {etrackAfricaCompany 145}
+ikotaMain OBJECT IDENTIFIER ::= {etrackAfricaCompany 155}
+ikotaQsp OBJECT IDENTIFIER ::= {etrackAfricaCompany 80}
+
+mayfair OBJECT IDENTIFIER ::= {etrackAfricaCompany 131}
+ME0001521 OBJECT IDENTIFIER ::= {mayfair 521}
+
+---------------------------------------------------------------------B13735378 INVERTER---------------------------------------------------------------------
+
+testCount OBJECT-TYPE
+    SYNTAX Integer32
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "A sample count of something."
+    ::= {B13735378 1}
+
+testDescription OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "A description of something"
+    ::= {B13735378 2}
+
+testTrap NOTIFICATION-TYPE
+    STATUS current
+    DESCRIPTION "Test notification"
+    ::= {B13735378 3}
+
+etgBatteryVoltage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the present battery voltage."
+    ::= {B13735378 4}
+
+etgBatteryCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery current."
+    ::= {B13735378 5}
+   
+etgBatteryPower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery power."
+    ::= {B13735378 6}
+
+etgBatteryTemperature OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The ambient temperature at or near the Battery."
+    ::= {B13735378 7}
+  
+etgBatteryInvertCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery invert DC current."
+    ::= { B13735378 8 }
+   
+etgBatteryInvertPower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery invert DC power."
+    ::= { B13735378 9 }
+
+etgBatteryChargeCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery charge DC current."
+    ::= { B13735378 10 }
+
+etgBatteryChargePower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery charge DC power."
+    ::= { B13735378 11 }
+
+etgChargePowerPercentage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "An estimate of the battery charge remaining expressed as a percent of full charge."
+    ::= { B13735378 12 }
+
+etgEnergyFromBatteryHour OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy drawn from the battery within hours expressed in kWh."
+    ::= { B13735378 13 }
+
+etgEnergyFromBatteryDay OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy drawn from the battery within days expressed in kWh."
+    ::= { B13735378 14 }
+
+etgEnergyFromBatteryWeek OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy drawn from the battery within weeks expressed in kWh."
+    ::= { B13735378 15 }
+
+etgEnergyToBatteryHour OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy given to the battery within hours expressed in kWh."
+    ::= { B13735378 16 }
+
+etgEnergyToBatteryDay OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy given to the battery within days expressed in kWh."
+    ::= { B13735378 17 }
+
+etgEnergyToBatteryWeek OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy given to the battery within weeks expressed in kWh."
+    ::= { B13735378 18 }
+
+etgInputFrequency OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the present present input frequency."
+    ::= { B13735378 19 }
+
+etgInputVoltage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the present input voltage."
+    ::= { B13735378 20 }
+
+etgInputCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present input current."
+    ::= { B13735378 21 }
+
+etgInputActivePower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present input active power."
+    ::= { B13735378 22 }
+
+etgOutputFrequency OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output frequency."
+    ::= { B13735378 23 }
+
+etgOutputVoltage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output voltage."
+    ::= { B13735378 24 }
+
+etgOutputCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output current."
+    ::= { B13735378 25 }
+
+etgOutputActivePower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output active power."
+    ::= { B13735378 26 }
+
+---------------------------------------------------------------------ME0000306 INVERTER---------------------------------------------------------------------
+
+testCount OBJECT-TYPE
+    SYNTAX Integer32
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "A sample count of something."
+    ::= {ME0000306 1}
+
+testDescription OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "A description of something"
+    ::= {ME0000306 2}
+
+testTrap NOTIFICATION-TYPE
+    STATUS current
+    DESCRIPTION "Test notification"
+    ::= {ME0000306 3}
+
+etgBatteryVoltage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the present battery voltage."
+    ::= {ME0000306 4}
+
+etgBatteryCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery current."
+    ::= {ME0000306 5}
+   
+etgBatteryPower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery power."
+    ::= {ME0000306 6}
+
+etgBatteryTemperature OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The ambient temperature at or near the Battery."
+    ::= {ME0000306 7}
+  
+etgBatteryInvertCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery invert DC current."
+    ::= { ME0000306 8 }
+   
+etgBatteryInvertPower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery invert DC power."
+    ::= { ME0000306 9 }
+
+etgBatteryChargeCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery charge DC current."
+    ::= { ME0000306 10 }
+
+etgBatteryChargePower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery charge DC power."
+    ::= { ME0000306 11 }
+
+etgChargePowerPercentage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "An estimate of the battery charge remaining expressed as a percent of full charge."
+    ::= { ME0000306 12 }
+
+etgEnergyFromBatteryHour OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy drawn from the battery within hours expressed in kWh."
+    ::= { ME0000306 13 }
+
+etgEnergyFromBatteryDay OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy drawn from the battery within days expressed in kWh."
+    ::= { ME0000306 14 }
+
+etgEnergyFromBatteryWeek OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy drawn from the battery within weeks expressed in kWh."
+    ::= { ME0000306 15 }
+
+etgEnergyToBatteryHour OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy given to the battery within hours expressed in kWh."
+    ::= { ME0000306 16 }
+
+etgEnergyToBatteryDay OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy given to the battery within days expressed in kWh."
+    ::= { ME0000306 17 }
+
+etgEnergyToBatteryWeek OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy given to the battery within weeks expressed in kWh."
+    ::= { ME0000306 18 }
+
+etgInputFrequency OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the present present input frequency."
+    ::= { ME0000306 19 }
+
+etgInputVoltage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the present input voltage."
+    ::= { ME0000306 20 }
+
+etgInputCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present input current."
+    ::= { ME0000306 21 }
+
+etgInputActivePower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present input active power."
+    ::= { ME0000306 22 }
+
+etgOutputFrequency OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output frequency."
+    ::= { ME0000306 23 }
+
+etgOutputVoltage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output voltage."
+    ::= { ME0000306 24 }
+
+etgOutputCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output current."
+    ::= { ME0000306 25 }
+
+etgOutputActivePower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output active power."
+    ::= { ME0000306 26 }
+
+---------------------------------------------------------------------ME0001521 INVERTER---------------------------------------------------------------------
+
+testCount OBJECT-TYPE
+    SYNTAX Integer32
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "A sample count of something."
+    ::= {ME0001521 1}
+
+testDescription OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "A description of something"
+    ::= {ME0001521 2}
+
+testTrap NOTIFICATION-TYPE
+    STATUS current
+    DESCRIPTION "Test notification"
+    ::= {ME0001521 3}
+
+etgBatteryVoltage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the present battery voltage."
+    ::= {ME0001521 4}
+
+etgBatteryCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery current."
+    ::= {ME0001521 5}
+   
+etgBatteryPower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery power."
+    ::= {ME0001521 6}
+
+etgBatteryTemperature OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The ambient temperature at or near the Battery."
+    ::= {ME0001521 7}
+  
+etgBatteryInvertCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery invert DC current."
+    ::= { ME0001521 8 }
+   
+etgBatteryInvertPower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery invert DC power."
+    ::= { ME0001521 9 }
+
+etgBatteryChargeCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery charge DC current."
+    ::= { ME0001521 10 }
+
+etgBatteryChargePower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery charge DC power."
+    ::= { ME0001521 11 }
+
+etgChargePowerPercentage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "An estimate of the battery charge remaining expressed as a percent of full charge."
+    ::= { ME0001521 12 }
+
+etgEnergyFromBatteryHour OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy drawn from the battery within hours expressed in kWh."
+    ::= { ME0001521 13 }
+
+etgEnergyFromBatteryDay OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy drawn from the battery within days expressed in kWh."
+    ::= { ME0001521 14 }
+
+etgEnergyFromBatteryWeek OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy drawn from the battery within weeks expressed in kWh."
+    ::= { ME0001521 15 }
+
+etgEnergyToBatteryHour OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy given to the battery within hours expressed in kWh."
+    ::= { ME0001521 16 }
+
+etgEnergyToBatteryDay OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy given to the battery within days expressed in kWh."
+    ::= { ME0001521 17 }
+
+etgEnergyToBatteryWeek OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy given to the battery within weeks expressed in kWh."
+    ::= { ME0001521 18 }
+
+etgInputFrequency OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the present present input frequency."
+    ::= { ME0001521 19 }
+
+etgInputVoltage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the present input voltage."
+    ::= { ME0001521 20 }
+
+etgInputCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present input current."
+    ::= { ME0001521 21 }
+
+etgInputActivePower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present input active power."
+    ::= { ME0001521 22 }
+
+etgOutputFrequency OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output frequency."
+    ::= { ME0001521 23 }
+
+etgOutputVoltage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output voltage."
+    ::= { ME0001521 24 }
+
+etgOutputCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output current."
+    ::= { ME0001521 25 }
+
+etgOutputActivePower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output active power."
+    ::= { ME0001521 26 }
+
+END

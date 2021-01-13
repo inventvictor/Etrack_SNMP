@@ -1,0 +1,179 @@
+testCount OBJECT-TYPE
+    SYNTAX Integer32
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "A sample count of something."
+    ::= {mayfair 1}
+
+testDescription OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "A description of something"
+    ::= {mayfair 2}
+
+testTrap NOTIFICATION-TYPE
+    STATUS current
+    DESCRIPTION "Test notification"
+    ::= {mayfair 3}
+
+etgBatteryVoltage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the present battery voltage."
+    ::= {mayfair 4}
+
+etgBatteryCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery current."
+    ::= {mayfair 5}
+   
+etgBatteryPower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery power."
+    ::= {mayfair 6}
+
+etgBatteryTemperature OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The ambient temperature at or near the Battery."
+    ::= {mayfair 7}
+  
+etgBatteryInvertCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery invert DC current."
+    ::= { mayfair 8 }
+   
+etgBatteryInvertPower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery invert DC power."
+    ::= { mayfair 9 }
+
+etgBatteryChargeCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery charge DC current."
+    ::= { mayfair 10 }
+
+etgBatteryChargePower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The present battery charge DC power."
+    ::= { mayfair 11 }
+
+etgChargePowerPercentage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "An estimate of the battery charge remaining expressed as a percent of full charge."
+    ::= { mayfair 12 }
+
+etgEnergyFromBatteryHour OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy drawn from the battery within hours expressed in kWh."
+    ::= { mayfair 13 }
+
+etgEnergyFromBatteryDay OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy drawn from the battery within days expressed in kWh."
+    ::= { mayfair 14 }
+
+etgEnergyFromBatteryWeek OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy drawn from the battery within weeks expressed in kWh."
+    ::= { mayfair 15 }
+
+etgEnergyToBatteryHour OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy given to the battery within hours expressed in kWh."
+    ::= { mayfair 16 }
+
+etgEnergyToBatteryDay OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy given to the battery within days expressed in kWh."
+    ::= { mayfair 17 }
+
+etgEnergyToBatteryWeek OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the energy given to the battery within weeks expressed in kWh."
+    ::= { mayfair 18 }
+
+etgInputFrequency OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the present present input frequency."
+    ::= { mayfair 19 }
+
+etgInputVoltage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION "The magnitude of the present input voltage."
+    ::= { mayfair 20 }
+
+etgInputCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present input current."
+    ::= { mayfair 21 }
+
+etgInputActivePower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present input active power."
+    ::= { mayfair 22 }
+
+etgOutputFrequency OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output frequency."
+    ::= { mayfair 23 }
+
+etgOutputVoltage OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output voltage."
+    ::= { mayfair 24 }
+
+etgOutputCurrent OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output current."
+    ::= { mayfair 25 }
+
+etgOutputActivePower OBJECT-TYPE
+    SYNTAX OCTET STRING
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION "The magnitude of the present output active power."
+    ::= { mayfair 26 }
